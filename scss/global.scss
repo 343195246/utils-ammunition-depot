@@ -1,0 +1,7 @@
+$font-size-root: 20px;
+
+// px 转换成 rem
+// $px 带px单位
+@function rem($px) {
+  @return #{$px/$font-size-root}rem;
+}
