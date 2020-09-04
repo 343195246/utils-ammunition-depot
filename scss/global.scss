@@ -1,7 +1,7 @@
-$font-size-root: 20px;
-
-// px 转换成 rem
-// $px 带px单位
-@function rem($px) {
-  @return #{$px/$font-size-root}rem;
+/*
+移动端尺寸比例兼容函数
+*/
+$vhAdjuster: 100vw/750;
+@function px($n) {
+  @return $n * $vhAdjuster;
 }
