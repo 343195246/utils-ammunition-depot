@@ -10,3 +10,17 @@ export function getRandom(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
 }
+
+/**
+ * 生成32位随机流水号
+ */
+random32() {
+  /*默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1*/
+  var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+  var maxPos = chars.length;
+  var pwd = '';
+  for (let i = 0; i < 32; i++) {
+    pwd += chars.charAt(Math.floor(Math.random() * maxPos));
+  }
+  return pwd
+}
